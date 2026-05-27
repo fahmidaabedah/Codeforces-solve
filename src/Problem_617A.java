@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Problem_617A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -16,7 +15,6 @@ public class Problem_617A {
             x = x % 2;
             count = count + (x / 1);
             x = x % 1;
-
         }
         System.out.println(count);
     }
