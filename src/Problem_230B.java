@@ -10,24 +10,25 @@ public class Problem_230B {
 
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextLong();
-            int count = 0;
+            boolean prime = true;
             long s = (long) sqrt(arr[i]);
-            if (s * s == arr[i]) {
-                for (long j = 1; j <= s; j++) {
-                    if (s % j == 0) {
-                        count++;
-                    }
+            if (s < 2) {
+                prime = false;
+            }
+            for (long j = 2; j <= Math.sqrt(s); j++) {
+                if (s % j == 0) {
+                    prime = false;
                 }
-//                System.out.println(count);
-                if (count == 2) {
-                    System.out.println("YES");
-                } else {
-                    System.out.println("NO");
-                }
-
+            }
+            if (s * s == arr[i] && prime) {
+                System.out.println("YES");
             } else {
                 System.out.println("NO");
             }
+
         }
+
     }
 }
+
+
