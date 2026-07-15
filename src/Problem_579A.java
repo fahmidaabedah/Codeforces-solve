@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Problem_579A {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int count = 0;
+        while (x > 0) {
+            if (x % 2 == 1) {
+                count++;
+            }
+            x = x / 2;
+        }
+        System.out.println(count);
+    }
+}
